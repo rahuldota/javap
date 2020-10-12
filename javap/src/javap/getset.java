@@ -12,14 +12,22 @@ class rectangle
     
     public void set(int l,int b)
     {
+        if(l>0 && b>0)
+        {
         length=l;
         breadth=b;
-    
+        }
+        else
+        {
+        l=0;
+        b=0;
+        }
     }
     public int getlength()
     {
     
-        return length;
+    return length;
+    
     }
     public int getbreadth()
     {
