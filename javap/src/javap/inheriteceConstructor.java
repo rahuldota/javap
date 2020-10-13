@@ -8,8 +8,8 @@
 
 class rectanglee{
     
-        private int length;
-        private int breadth;
+        public int length;
+        public int breadth;
         
         
        public rectanglee()
@@ -23,6 +23,12 @@ class rectanglee{
        System.out.println("rectangle" +a);
        
        }
+       public rectanglee(int a , int b)
+       {
+           length=a;
+           breadth=b;
+           System.out.println("length,breadth "+a +" " +b);
+       }
 }
 
 class cuboid extends rectanglee{
@@ -30,14 +36,30 @@ class cuboid extends rectanglee{
     private int height;
         public cuboid()
         {
+            
+            super(3);
+           // super();
+            
             height=1;
             System.out.println("height " +height);
         }
         public cuboid(int a)
         {
-            super(a);
+             super(a);
             System.out.println("cuboid  "+a);
-            
+           
+        }
+        public cuboid(int a, int b, int c)
+        {
+            super(a,b);
+            height=c;
+            System.out.println("height" +height);
+        
+        }
+        public void volume()
+        {
+        
+        System.out.println("volume is" + length*breadth*height);
         }
 
 }   
@@ -49,7 +71,12 @@ public class inheriteceConstructor {
     
 public static void main(String arg[])
 {
-            cuboid c=new cuboid(2);
+           // cuboid c=new cuboid(1,2,3);
+           //cuboid c=new cuboid(1);
+            cuboid c=new cuboid();
+
+//c.volume();
+            
         }
 
 }
